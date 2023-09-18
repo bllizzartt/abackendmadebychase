@@ -5,14 +5,15 @@ from server.helpers import generate_prompt
 import json
 import openai
 
-openai.api_key = "<PUT YOUR API KEY HERE>"
+#chat gpt api key placement
+openai.api_key = "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"
 @api_view(['GET', 'POST'])
 def recipe_list(request):
     
     response = {
          'data': 'This endpoint only supports POST'
 	}
-    
+    #post if statement
     if request.method == 'POST':
         body = json.loads(request.body)
         if 'ingredients' not in body:
@@ -23,3 +24,4 @@ def recipe_list(request):
             response['data'] = completion.choices[0].message.content
         
     return Response(response, status=status.HTTP_200_OK)
+
