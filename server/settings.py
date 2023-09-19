@@ -125,16 +125,16 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-if os.environ['ENVIRONMENT'] == "PRODUCTION":
-    DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': "django.db.backends.postgresql_psycopg2",
-            'HOST': "db.kiycjcnyiakvoohiheqb.supabase.co",
-            'NAME': "postgres",
-            'USER': "postgres",
-            'PASSWORD': "Teleca$Ter1234567!!!!",
-            'PORT': "5432"
-        }
-    }
+# if os.environ['ENVIRONMENT'] == "PRODUCTION":
+#     DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': "django.db.backends.postgresql_psycopg2",
+#             'HOST': "db.kiycjcnyiakvoohiheqb.supabase.co",
+#             'NAME': "postgres",
+#             'USER': "postgres",
+#             'PASSWORD': "Teleca$Ter1234567!!!!",
+#             'PORT': "5432"
+#         }
+#     }
